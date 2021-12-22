@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico?" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiTube</title>
+</head>
+
+<body onload="onInit()">
+
+    <div class="main-container">
+
+        <!-- Header -->
+        <header class="main-header">
+            <h1>WikiTube <i class="fab fa-youtube"></i></h1>
+            <div>
+                <i class="far fa-copyright"></i> <small>powered by Daniel Shaked 2022</small>
+            </div>
+            <a class="github" href="https://github.com/DanielShaked?tab=repositories " target="_blank"><i
+                    class="fab fa-github"></i></a>
+
+        </header>
+
+        <!-- 5 Videos Container -->
+        <div class="videos-container"></div>
+
+
+        <!-- Player & wiki Container -->
+        <div class="video-player-container">
+            <label class="search" for="search-input"><i class="fas fa-search"></i>
+                <input id="search-input" onblur="onSearchSong(this.value)" list="songs-names"
+                    placeholder="Enter song/Artist..." name="songs-names" />
+            </label>
+            <iframe width="430" height="345" src="https://www.youtube.com/embed/tEwvUu1dBTs?autoplay=1" frameborder="0"
+                allowfullscreen allow='autoplay'></iframe>
+            <div class="wiki-container">
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="js/storage.js"></script>
+    <script src="lib/axios.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>

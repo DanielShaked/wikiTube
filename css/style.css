@@ -1,0 +1,129 @@
+body {
+    background-color: #40514E;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    grid-area: header;
+    background-color: #323232;
+    color: #40514E;
+    position: relative;
+
+}
+
+.main-header div {
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+}
+
+.github {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 25px;
+    color: #40514E;
+
+}
+
+.main-header h1 {
+    text-align: center;
+}
+
+
+
+.videos-container {
+    grid-area: aside;
+    margin-top: 60px;
+    margin-left: 45px;
+}
+
+.video-card {
+    position: relative;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.video-card img {
+    border-radius: 15px;
+}
+
+.video-card span {
+    color: aliceblue;
+    position: absolute;
+    left: 150px;
+    top: 25%;
+
+}
+
+iframe {
+    background-color: #323232;
+    margin-top: 150px;
+    margin-left: 50px;
+    border-radius: 15px;
+}
+
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 6fr 2fr;
+    grid-template-areas: 'header header'
+        'aside player'
+        'footer footer';
+    height: 100vh;
+
+}
+
+.video-player-container {
+    grid-area: player;
+}
+
+input {
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.search {
+    position: absolute;
+    right: 28%;
+    top: 20%;
+}
+
+.fa-play-circle {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main-footer {
+    grid-area: footer;
+    background-color: #323232;
+}
+
+.wiki-container {
+    color: white;
+    font-size: 18px;
+    width: 300px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+label {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 965px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header'
+            'player'
+            'aside'
+            'footer';
+    }
+
+    iframe {
+        width: 80%;
+    }
+
+}
